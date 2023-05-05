@@ -1,7 +1,7 @@
-.const { JSDOM } = require("jsdom");
+const { JSDOM } = require("jsdom");
 
 function getUrlsFromHTML(htmlBody, baseURL) {
-  const urls = [];  
+  const urls = [];
   const dom = new JSDOM(htmlBody);
   const linkElements = dom.window.document.querySelectorAll("a");
 
